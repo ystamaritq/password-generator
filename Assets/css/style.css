@@ -39,11 +39,16 @@ section {
 	background-color: hsl(0, 0%, 100%);
 }
 
+.card-title {
+	margin-left: 35px;
+}
+
 textarea {
 	padding: 10px;
 	border-style: dashed;
 	width: 700px;
 	height: 200px;
+	line-height: 60px;
 	align-self: center;
 }
 
@@ -69,7 +74,6 @@ button {
 .card-body,
 .card-footer {
 	align-self: center;
-	margin-top: 20px;
 }
 
 textarea::placeholder {
