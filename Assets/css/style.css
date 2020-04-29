@@ -15,6 +15,14 @@ h2 {
 	font-family: monospace;
 }
 
+h1 {
+	font-size: 35px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
 section {
 	display: flex;
 	flex-direction: column;
@@ -29,7 +37,6 @@ section {
 	display: flex;
 	flex-direction: column;
 	background-color: hsl(0, 0%, 100%);
-	align-items: center;
 }
 
 textarea {
@@ -37,11 +44,12 @@ textarea {
 	border-style: dashed;
 	width: 700px;
 	height: 200px;
+	align-self: center;
 }
 
 button {
 	border: none;
-	background-color: hsl(360, 91%, 36%);
+	background-color: gray;
 	border-radius: 25px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
 		0px;
@@ -53,4 +61,20 @@ button {
 	padding: 14px 34px;
 	text-align: center;
 	cursor: pointer;
+	align-self: center;
+	border-style: groove;
+	border-color: darkgray;
+}
+
+.card-body,
+.card-footer {
+	align-self: center;
+}
+
+textarea::placeholder {
+	text-align: center;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	color: hsl(206, 17%, 28%);
+	font-family: monospace;
+	font-size: 18px;
 }
