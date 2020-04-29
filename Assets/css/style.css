@@ -1,0 +1,108 @@
+html,
+body,
+section {
+	height: 100%;
+}
+
+body {
+	background-color: #f2f5f9;
+}
+
+h1,
+h2 {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	color: hsl(206, 17%, 28%);
+	font-family: monospace;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card {
+	height: 400px;
+	width: 800px;
+	padding: 30px;
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	background-color: hsl(0, 0%, 100%);
+}
+
+.card-title {
+	margin-left: 35px;
+}
+
+textarea {
+	padding: 10px;
+	border-style: dashed;
+	width: 700px;
+	height: 200px;
+	line-height: 60px;
+	align-self: center;
+}
+
+button {
+	border: none;
+	background-color: gray;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+		0px;
+	color: hsl(0, 0%, 100%);
+	display: inline-block;
+	font-size: 22px;
+	line-height: 22px;
+	margin: 16px 16px 16px 20px;
+	padding: 14px 34px;
+	text-align: center;
+	cursor: pointer;
+	align-self: center;
+	border-style: groove;
+	border-color: darkgray;
+}
+
+.card-body,
+.card-footer {
+	align-self: center;
+}
+
+textarea::placeholder {
+	text-align: center;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	color: hsl(206, 17%, 28%);
+	font-family: monospace;
+	font-size: 18px;
+}
+
+.space {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.card-body::before {
+	content: " ";
+	display: block;
+	width: 100%;
+	background: #e7e9eb;
+	height: 2px;
+	margin-bottom: 20px;
+}
+
+.card-body::after {
+	content: " ";
+	display: block;
+	width: 100%;
+	background: #e7e9eb;
+	height: 2px;
+	margin-top: 20px;
+}
