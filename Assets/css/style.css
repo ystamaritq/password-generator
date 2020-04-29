@@ -69,6 +69,7 @@ button {
 .card-body,
 .card-footer {
 	align-self: center;
+	margin-top: 20px;
 }
 
 textarea::placeholder {
@@ -77,4 +78,27 @@ textarea::placeholder {
 	color: hsl(206, 17%, 28%);
 	font-family: monospace;
 	font-size: 18px;
+}
+
+.space {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.card-body::before {
+	content: " ";
+	display: block;
+	width: 100%;
+	background: #e7e9eb;
+	height: 2px;
+	margin-bottom: 20px;
+}
+
+.card-body::after {
+	content: " ";
+	display: block;
+	width: 100%;
+	background: #e7e9eb;
+	height: 2px;
+	margin-top: 20px;
 }
