@@ -33,9 +33,9 @@ function generatePassword() {
 	//confirm window to include in the password : lowerCase
 	var lowerCasePass = confirm("Do you want to include lowercase letters?");
 
-	//prompt window to include in the password  : upperCase
+	//confirm window to include in the password  : upperCase
 	var upperCasePass = confirm("Do you want to include uppercase letters?");
 
-	// //prompt window to include in the password: numeric
-	// var numericPass = prompt("prompt window to include in the password ");
+	// confirm window to include in the password: numeric
+	var numericPass = confirm("Do you want to include numbers?");
 }
