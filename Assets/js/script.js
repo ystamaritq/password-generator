@@ -76,15 +76,17 @@ function getPassCriteria() {
 		return passArraySelections;
 	} else {
 		alert("Select at least one criteria for your password");
+		return -1;
 	}
 }
 
 // main function generatePassword()
 function generatePassword() {
-	var showNumber = document.getElementById("password-id").value;
+	var showNumber = document.getElementById("password-id");
 
 	if (getPassLength() > 0) {
-		getPassCriteria();
+		// getPassCriteria();
+		return (showNumber.value = getPassCriteria());
 
 		// //confirm window to include in the password : lowerCase
 		// var lowerCasePass = confirm("Do you want to include lowercase letters?");
