@@ -38,4 +38,7 @@ function generatePassword() {
 
 	// confirm window to include in the password: numeric
 	var numericPass = confirm("Do you want to include numbers?");
+
+	//confirm window to include in the password: characters
+	var charactersPass = confirm("Do you want to include characters?");
 }
