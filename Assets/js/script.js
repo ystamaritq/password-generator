@@ -17,14 +17,19 @@ var uppercase = lowercase.toUpperCase();
 var numeric = "0123456789";
 var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
+function getPassLength() {
+	// var to save the length of the password
+	var userPassLength = prompt(
+		" Enter the password's length (Number betweem 8 and no more than 128 characters)"
+	);
+	return userPassLength;
+}
+
 function generatePassword() {
 	var test = document.getElementById("password-id");
-	test.value = "This is a place for the password";
+	test.value = getPassLength();
 
-	// // var to save the length of the password
-	// var passLength = prompt(
-	// 	" Enter the password's length (Number betweem 8 and no more than 128 characters)"
-	// );
+	//
 	// //prompt window to include in the password : lowerCase
 	// var lowerCasePass = prompt("Do you want to include lowercase letters?");
 	// //prompt window to include in the password  : upperCase
