@@ -18,16 +18,17 @@ var numeric = "0123456789";
 var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
 function generatePassword() {
-	// var to save the lenght of the password
-	var passLength = prompt(
-		" Enter the password's length (Number betweem 8 and no more than 128 characters)"
-	);
+	var test = document.getElementById("password-id");
+	test.value = "This is a place for the password";
 
-	//var character types to include in the password : lowerCase
-	var lowerCasePass = prompt("Do you want to include lowercase letters?");
-
-	//character types to include in the password : upperCase
-	var upperCasePass = prompt("Do you want to include uppercase letters?");
-
-	//
+	// // var to save the length of the password
+	// var passLength = prompt(
+	// 	" Enter the password's length (Number betweem 8 and no more than 128 characters)"
+	// );
+	// //prompt window to include in the password : lowerCase
+	// var lowerCasePass = prompt("Do you want to include lowercase letters?");
+	// //prompt window to include in the password  : upperCase
+	// var upperCasePass = prompt("Do you want to include uppercase letters?");
+	// //prompt window to include in the password: numeric
+	// var numericPass = prompt("prompt window to include in the password ");
 }
