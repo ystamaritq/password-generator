@@ -22,7 +22,15 @@ function getPassLength() {
 	var userPassLength = prompt(
 		" Enter the password's length (Number betweem 8 and no more than 128 characters)"
 	);
-	return userPassLength;
+
+	if (userPassLength !== "" && userPassLength >= 8 && userPassLength <= 128) {
+		alert("your password will have " + userPassLength + " length");
+	} else {
+		alert(
+			"you must to select a valid password length (Number betweem 8 and no more than 128 characters)"
+		);
+	}
+	// return userPassLength;
 }
 
 function generatePassword() {
