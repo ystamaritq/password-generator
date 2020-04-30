@@ -26,14 +26,16 @@ function getPassLength() {
 }
 
 function generatePassword() {
+	//show in the textarea the value (test)
 	var test = document.getElementById("password-id");
 	test.value = getPassLength();
 
-	//prompt window to include in the password : lowerCase
+	//confirm window to include in the password : lowerCase
 	var lowerCasePass = confirm("Do you want to include lowercase letters?");
 
-	// //prompt window to include in the password  : upperCase
-	// var upperCasePass = prompt("Do you want to include uppercase letters?");
+	//prompt window to include in the password  : upperCase
+	var upperCasePass = confirm("Do you want to include uppercase letters?");
+
 	// //prompt window to include in the password: numeric
 	// var numericPass = prompt("prompt window to include in the password ");
 }
