@@ -1,39 +1,28 @@
-/* 
-  Issue # 3:  
-- Create a button event to generate a password.
-- Add action prompt templates 
-*/
-
-/*
--THEN I select which criteria to include in the password
--When prompted for the length of the password
--THEN I choose a length of at least 8 characters and no more than 128 characters
--WHEN prompted for character types to include in the password
--THEN I choose lowercase, uppercase, numeric, and/or special characters */
-
 // creating the types for the password
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = lowercase.toUpperCase();
 var numeric = "0123456789";
 var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
-// function Length
+// function to validate password length
 function getPassLength() {
 	var userPassLength = prompt(
 		" Enter the password's length (Number betweem 8 and no more than 128 characters)"
 	);
 
-	userPassLengthInt = parseInt(userPassLength);
+	userPassLength = parseInt(userPassLength);
 
+	//validate password not be '', between 8 & 128 , and to be an integer
 	if (
-		userPassLengthInt !== "" &&
-		userPassLengthInt >= 8 &&
-		userPassLengthInt <= 128 &&
-		Number.isInteger(userPassLengthInt) === true
+		userPassLength !== "" &&
+		userPassLength >= 8 &&
+		userPassLength <= 128 &&
+		Number.isInteger(userPassLength) === true
 	) {
-		alert("your password will have " + userPassLengthInt + " length");
-		return userPassLengthInt;
+		alert("your password will have " + userPassLength + " length");
+		return userPassLength;
 	} else {
+		alert("plase enter a valid password length");
 		return -1;
 	}
 }
@@ -41,7 +30,7 @@ function getPassLength() {
 function generatePassword() {
 	var textvalue = document.getElementById("password-id");
 	textvalue.value = getPassLength();
-	/*
+
 	if (textvalue > 0) {
 		//confirm window to include in the password : lowerCase
 		var lowerCasePass = confirm("Do you want to include lowercase letters?");
@@ -56,5 +45,5 @@ function generatePassword() {
 		var charactersPass = confirm("Do you want to include characters?");
 	} else {
 		alert("test");
-	} */
+	}
 }
