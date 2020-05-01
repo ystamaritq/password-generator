@@ -85,17 +85,7 @@ function generatePassword() {
 	var showNumber = document.getElementById("password-id");
 
 	if (getPassLength() > 0) {
-		// getPassCriteria();
 		return (showNumber.value = getPassCriteria());
-
-		// //confirm window to include in the password : lowerCase
-		// var lowerCasePass = confirm("Do you want to include lowercase letters?");
-		// //confirm window to include in the password  : upperCase
-		// var upperCasePass = confirm("Do you want to include uppercase letters?");
-		// // confirm window to include in the password: numeric
-		// var numericPass = confirm("Do you want to include numbers?");
-		// //confirm window to include in the password: characters
-		// var charactersPass = confirm("Do you want to include characters?");
 	} else {
 		return -1;
 	}
