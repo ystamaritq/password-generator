@@ -1,5 +1,6 @@
 // function to validate password length
 function getPassLength() {
+	//ask the user the desire length for the password
 	var userPassLength = prompt(
 		" Enter the password's length (Number betweem 8 and no more than 128 characters)"
 	);
@@ -12,8 +13,7 @@ function getPassLength() {
 		userPassLengthUpdate !== "" &&
 		userPassLengthUpdate >= 8 &&
 		userPassLengthUpdate <= 128 &&
-		Number.isInteger(userPassLengthUpdate) === true &&
-		userPassLengthUpdate % 1 === 0
+		Number.isInteger(userPassLengthUpdate) === true
 	) {
 		alert("your password will have " + userPassLengthUpdate + " length");
 		return userPassLengthUpdate;
@@ -44,6 +44,7 @@ function getPassCriteria() {
 	var passArraySelections = [];
 
 	//confirm window to include in the password : lowerCase
+
 	var lowerCasePass = confirm("Do you want to include lowercase letters?");
 	if (lowerCasePass) {
 		passArraySelections.push(lowercase);
@@ -72,6 +73,7 @@ function getPassCriteria() {
 	resultCounts =
 		countLowerCase + countUpperCase + countNumeric + countCharacter;
 
+	//validation user select at least one criteria option
 	if (resultCounts > 0) {
 		return passArraySelections;
 	} else {
@@ -82,12 +84,14 @@ function getPassCriteria() {
 
 //function to randomPassCriteria from the selected user criteria
 function randomPassCriteria() {
-	//getting length from getPassLength() function user length
-	var length = getPassLength();
-	//var with the charSets of criteria selected by the user
-	var charSets = getPassCriteria();
 	//var newPassword
 	var newPassword = "";
+	//getting length from getPassLength() function user length
+	var length = getPassLength();
+	//validate the length
+	if (length < 0) return newPassword;
+	//var with the charSets of criteria selected by the user
+	var charSets = getPassCriteria();
 
 	//control flow with a breakpoint at user selected length
 	for (var i = 0; i < length; i++) {
@@ -103,19 +107,9 @@ function randomPassCriteria() {
 	return newPassword;
 }
 
-// main function generatePassword()
-// function generatePassword() {
-// 	//show the password in the textarea
-// 	var showNumber = document.getElementById("password-id");
-// 	if (getPassLength() > 0) {
-// 		return (showNumber.value = randomPassCriteria());
-// 	} else {
-// 		return -1;
-// 	}
-// }
-
+//onClick function
 function generatePassword() {
 	//show the password in the textarea
-	var showNumber = document.getElementById("password-id");
-	return (showNumber.value = randomPassCriteria());
+	var userPassword = document.getElementById("password-id");
+	return (userPassword.value = randomPassCriteria());
 }
