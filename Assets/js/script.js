@@ -85,14 +85,22 @@ function randomPassCriteria() {
 	//getting length from getPassLength() function user length
 	var length = getPassLength();
 
+	var newPassword = "";
+
 	//control flow with a breakpoint at user selected length
 	for (var i = 0; i <= length; i++) {
 		//var with the charSets of criteria selected by the user
 		var charSets = getPassCriteria();
 		//creating charSet to get the indexes inside the charSets Array selected by the user
+		var charSetIndex = i % charSets.length;
+		//getting the set inside the array
+		var charSet = charSets[charSetIndex];
 		// creating random index
 		var randomIndex = Math.floor(Math.random() * charSets.length);
+		//creating new password
+		newPassword += charSet.charAt(randomIndex);
 	}
+	return newPassword;
 }
 
 // main function generatePassword()
@@ -101,7 +109,7 @@ function generatePassword() {
 	var showNumber = document.getElementById("password-id");
 
 	if (getPassLength() > 0) {
-		return (showNumber.value = getPassCriteria());
+		return (showNumber.value = randomPassCriteria());
 	} else {
 		return -1;
 	}
