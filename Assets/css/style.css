@@ -12,7 +12,8 @@ body {
 
 h1,
 h2,
-textarea {
+textarea,
+textarea::placeholder {
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	color: hsl(210, 2%, 49%);
 	font-family: monospace;
@@ -81,9 +82,6 @@ button {
 
 textarea::placeholder {
 	text-align: center;
-	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-	color: hsl(206, 17%, 28%);
-	font-family: monospace;
 	font-size: 18px;
 }
 
