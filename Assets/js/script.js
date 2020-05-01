@@ -84,13 +84,14 @@ function getPassCriteria() {
 
 //function to randomPassCriteria from the selected user criteria
 function randomPassCriteria() {
-	//getting length from getPassLength() function user length
-	var length = getPassLength();
-	if (length < 0) return "";
-	//var with the charSets of criteria selected by the user
-	var charSets = getPassCriteria();
 	//var newPassword
 	var newPassword = "";
+	//getting length from getPassLength() function user length
+	var length = getPassLength();
+	//validate the length
+	if (length < 0) return newPassword;
+	//var with the charSets of criteria selected by the user
+	var charSets = getPassCriteria();
 
 	//control flow with a breakpoint at user selected length
 	for (var i = 0; i < length; i++) {
