@@ -90,7 +90,7 @@ function randomPassCriteria() {
 	var newPassword = "";
 
 	//control flow with a breakpoint at user selected length
-	for (var i = 0; i <= length; i++) {
+	for (var i = 0; i < length; i++) {
 		//creating charSet to get the indexes inside the charSets Array selected by the user
 		var charSetIndex = i % charSets.length;
 		//getting the set inside the array
