@@ -1,9 +1,3 @@
-// creating the types for the password
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var uppercase = lowercase.toUpperCase();
-var numeric = "0123456789";
-var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-
 // function to validate password length
 function getPassLength() {
 	var userPassLength = prompt(
@@ -29,19 +23,69 @@ function getPassLength() {
 	}
 }
 
-function generatePassword() {
-	var showNumber = document.getElementById("password-id").value;
-	var resultLength = getPassLength();
+// function get password criteria
+function getPassCriteria() {
+	// creating the types for the password
+	var lowercase = "abcdefghijklmnopqrstuvwxyz";
+	var uppercase = lowercase.toUpperCase();
+	var numeric = "0123456789";
+	var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
-	if (resultLength > 0) {
-		//confirm window to include in the password : lowerCase
-		var lowerCasePass = confirm("Do you want to include lowercase letters?");
-		//confirm window to include in the password  : upperCase
-		var upperCasePass = confirm("Do you want to include uppercase letters?");
-		// confirm window to include in the password: numeric
-		var numericPass = confirm("Do you want to include numbers?");
-		//confirm window to include in the password: characters
-		var charactersPass = confirm("Do you want to include characters?");
+	//creating count variables
+	var countLowerCase = 0;
+	var countUpperCase = 0;
+	var countNumeric = 0;
+	var countCharacter = 0;
+
+	//to validate if the user select at least one criteria
+	var resultCounts = 0;
+
+	//var array to store the results and create the array from the given criteria
+	var passArraySelections = [];
+
+	//confirm window to include in the password : lowerCase
+	var lowerCasePass = confirm("Do you want to include lowercase letters?");
+	if (lowerCasePass) {
+		passArraySelections.push(lowercase);
+		countLowerCase++;
+	}
+
+	//confirm window to include in the password  : upperCase
+	var upperCasePass = confirm("Do you want to include uppercase letters?");
+	if (upperCasePass) {
+		passArraySelections.push(uppercase);
+		countUpperCase++;
+	}
+	// confirm window to include in the password: numeric
+	var numericPass = confirm("Do you want to include numbers?");
+	if (numericPass) {
+		passArraySelections.push(numeric);
+		countNumeric++;
+	}
+	//confirm window to include in the password: characters
+	var charactersPass = confirm("Do you want to include characters?");
+	if (charactersPass) {
+		passArraySelections.push(specialcharacter);
+		countCharacter++;
+	}
+
+	resultCounts =
+		countLowerCase + countUpperCase + countNumeric + countCharacter;
+
+	if (resultCounts > 0) {
+		return passArraySelections;
+	} else {
+		alert("Select at least one criteria for your password");
+		return -1;
+	}
+}
+
+// main function generatePassword()
+function generatePassword() {
+	var showNumber = document.getElementById("password-id");
+
+	if (getPassLength() > 0) {
+		return (showNumber.value = getPassCriteria());
 	} else {
 		return -1;
 	}
