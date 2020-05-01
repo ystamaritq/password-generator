@@ -111,5 +111,6 @@ function randomPassCriteria() {
 function generatePassword() {
 	//show the password in the textarea
 	var userPassword = document.getElementById("password-id");
+	//return new password for the user
 	return (userPassword.value = randomPassCriteria());
 }
