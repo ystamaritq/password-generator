@@ -13,8 +13,7 @@ function getPassLength() {
 		userPassLengthUpdate !== "" &&
 		userPassLengthUpdate >= 8 &&
 		userPassLengthUpdate <= 128 &&
-		Number.isInteger(userPassLengthUpdate) === true &&
-		userPassLengthUpdate % 1 === 0
+		Number.isInteger(userPassLengthUpdate) === true
 	) {
 		alert("your password will have " + userPassLengthUpdate + " length");
 		return userPassLengthUpdate;
@@ -87,6 +86,7 @@ function getPassCriteria() {
 function randomPassCriteria() {
 	//getting length from getPassLength() function user length
 	var length = getPassLength();
+	if (length < 0) return "";
 	//var with the charSets of criteria selected by the user
 	var charSets = getPassCriteria();
 	//var newPassword
@@ -106,6 +106,7 @@ function randomPassCriteria() {
 	return newPassword;
 }
 
+//onClick function
 function generatePassword() {
 	//show the password in the textarea
 	var userPassword = document.getElementById("password-id");
