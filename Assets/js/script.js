@@ -80,8 +80,12 @@ function getPassCriteria() {
 	}
 }
 
+//function to randomPassCriteria from the selected user criteria
+function randomPassCriteria() {}
+
 // main function generatePassword()
 function generatePassword() {
+	//show the password in the textarea
 	var showNumber = document.getElementById("password-id");
 
 	if (getPassLength() > 0) {
