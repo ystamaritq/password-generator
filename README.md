@@ -14,6 +14,7 @@ To test this project, simply clone project into a your local file system and ope
 git clone https://github.com/ystamaritq/password-generator.git
 cd password-generator
 open index.html
+
 ```
 
 ### Initial Configuration
@@ -26,9 +27,8 @@ Below is a summary of the key files for this project and their purpose:
 
 - **index.html** Password generator html page
 - **assets** folder that contains all files
-- **script.js** javascript files
-- **style.css** main site stylesheet
-- **Assets/03-javascript-homework-demo** image used by website
+- **assets/script.js** javascript files
+- **assets/style.css** main site stylesheet
 
 Additional Libraries:
 
@@ -36,7 +36,7 @@ No additional libraries required.
 
 ## Features
 
-This site shows password generator website when the user click the button Generate based on the criteria generate a random password to the user.
+This site shows password generator website when the user click the button Generate based on the criteria generate a random password to the user given user select criteria(s) and length.
 
 ## Licensing
 
