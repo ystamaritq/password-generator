@@ -53,8 +53,9 @@ textarea {
 	height: 200px;
 	line-height: 60px;
 	align-self: center;
-	text-align: center;
 	font-size: 19px;
+	display: flex;
+	text-align: center;
 }
 
 button {
@@ -78,16 +79,6 @@ button {
 
 .card-footer {
 	align-self: center;
-}
-
-textarea::placeholder {
-	text-align: center;
-	font-size: 18px;
-}
-
-.space {
-	margin-top: 4px;
-	margin-bottom: 4px;
 }
 
 .card-body {
