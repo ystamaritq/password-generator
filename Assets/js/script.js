@@ -13,7 +13,8 @@ function getPassLength() {
 		userPassLengthUpdate !== "" &&
 		userPassLengthUpdate >= 8 &&
 		userPassLengthUpdate <= 128 &&
-		Number.isInteger(userPassLengthUpdate) === true
+		Number.isInteger(userPassLengthUpdate) === true &&
+		userPassLengthUpdate.isInteger()
 	) {
 		alert("your password will have " + userPassLengthUpdate + " length");
 		return userPassLengthUpdate;
