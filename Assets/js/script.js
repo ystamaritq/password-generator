@@ -2,21 +2,20 @@
 function getPassLength() {
 	//ask the user the desire length for the password
 	var userPassLength = prompt(
-		" Enter the password's length (Number betweem 8 and no more than 128 characters)"
+		" Enter the password's length (Number between 8 and no more than 128 characters)"
 	);
 
-	var userPassLengthUpdate = 0;
-	userPassLengthUpdate = parseInt(userPassLength);
+	var userPassLengthValue = parseInt(userPassLength);
 
 	//validate password not be '', between 8 & 128 , and to be an integer
 	if (
-		userPassLengthUpdate !== "" &&
-		userPassLengthUpdate >= 8 &&
-		userPassLengthUpdate <= 128 &&
-		Number.isInteger(userPassLengthUpdate) === true
+		userPassLength !== "" &&
+		Number.isInteger(userPassLengthValue) === true &&
+		userPassLengthValue >= 8 &&
+		userPassLengthValue <= 128
 	) {
-		alert("your password will have " + userPassLengthUpdate + " length");
-		return userPassLengthUpdate;
+		alert("your password will have " + userPassLengthValue + " length");
+		return userPassLengthValue;
 	} else {
 		alert("plase enter a valid password length");
 		return -1;
