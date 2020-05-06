@@ -1,4 +1,7 @@
 // function to validate password length
+
+var buttonEl = document.querySelector("#generate");
+
 function getPassLength() {
 	//ask the user the desire length for the password
 	var userPassLength = prompt(
@@ -113,3 +116,5 @@ function generatePassword() {
 	//return new password for the user
 	return (userPassword.value = randomPassCriteria());
 }
+
+buttonEl.addEventListener("click", generatePassword);
