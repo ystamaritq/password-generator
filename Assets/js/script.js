@@ -76,12 +76,10 @@ function getPassCriteria() {
 		countLowerCase + countUpperCase + countNumeric + countCharacter;
 
 	//validation user select at least one criteria option
-	if (resultCounts > 0) {
-		return passArraySelections;
-	} else {
+	if (resultCounts == 0) {
 		alert("Select at least one criteria for your password");
-		return -1;
 	}
+	return passArraySelections;
 }
 
 //function to randomPassCriteria from the selected user criteria
@@ -95,17 +93,18 @@ function randomPassCriteria() {
 	//var with the charSets of criteria selected by the user
 	var charSets = getPassCriteria();
 
-	//control flow with a breakpoint at user selected length
-	for (var i = 0; i < length; i++) {
-		//creating charSet to get the indexes inside the charSets Array selected by the user
-		var charSetIndex = i % charSets.length;
-		//getting the set inside the array
-		var charSet = charSets[charSetIndex];
-		// creating random index
-		var randomIndex = Math.floor(Math.random() * charSets.length);
-		//creating new password
-		newPassword += charSet.charAt(randomIndex);
-	}
+	if (charSets.length > 0)
+		//control flow with a breakpoint at user selected length
+		for (var i = 0; i < length; i++) {
+			//creating charSet to get the indexes inside the charSets Array selected by the user
+			var charSetIndex = i % charSets.length;
+			//getting the set inside the array
+			var charSet = charSets[charSetIndex];
+			// creating random index
+			var randomIndex = Math.floor(Math.random() * charSet.length);
+			//creating new password
+			newPassword += charSet.charAt(randomIndex);
+		}
 	return newPassword;
 }
 
