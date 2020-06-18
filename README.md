@@ -38,6 +38,12 @@ No additional libraries required.
 
 This site shows password generator website when the user click the button Generate based on the criteria generate a random password to the user given user select criteria(s) and length.
 
+## Links
+
+[Deployed link: Try it out!](https://ystamaritq.github.io/password-generator/) </div>
+
+[GitHub link](https://github.com/ystamaritq/password-generator) </div>
+
 ## Licensing
 
 "The code in this project is licensed under MIT license."
